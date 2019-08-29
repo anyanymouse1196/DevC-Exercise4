@@ -18,7 +18,7 @@
     <img src="https://image.flaticon.com/icons/svg/919/919851.svg" alt="logoAja" id="logo" >
     <ul class="nav">
       <li><a href="/index.html">Home</a></li>
-      <li><a href="/kalkulator.html">Kalkulator</a></li>
+      <li><a href="#">Kalkulator</a></li>
       <li><a href="/about.html">About</a></li>
     </ul>
   </header>
@@ -31,30 +31,37 @@
     </div>
   </div>
 
-  <div id="formAja">
-    <center>
-      <h4 id="formJudul">Silahkan daftar diri anda . . .</h4>
-    </center>
-    <form action="https://formspree.io/email@domain.tld" method="POST" name="formulir" id="form">
-      <label for="name">Nama :</label>
-      <input type="text" id="name" name="name" placeholder="Nama anda.." data-toggle="tooltip" data-placement="right" title="Isi dengan huruf besar diawal kata.">
-  
-      <label for="email">Email :</label>
-      <input type="text" id="email" name="email" placeholder="email@example.com" data-toggle="tooltip" data-placement="right" title="Isi dengan email yang valid">
-      
-      <label for="password">Password :</label>
-      <input type="password" id="password" name="password" placeholder="********" data-toggle="tooltip" data-placement="right" title="Minimal 8 karakter" onblur="checkPass1()">
-      <div id="error-nul"></div>
-      <label for="kPassword">Konfirmasi Password :</label>
-      <input type="password" id="kPassword" name="kPassword" placeholder="********" data-toggle="tooltip" data-placement="right" title="Konfirmasi password anda." onkeyup="checkPass()">
-      <div id="error-nwl"></div>
-      <input type="submit" value="Submit" onclick="ValidateEmail(document.formulir.password)">
+  <div id="app">
+    <h2 class="kalkulator">Kalkulator</h2>
+    <label for="#bilangan1"class="petunjuk">Isikan angka pada <i>textbox</i>, kemudian pilih operasi aritmatika yang diinginkan, dan klik "Hitung".</label>
+    <form action="" id="kalku">
+        <input type="text" id="bilangan1"/>
+        <input type="text" id="bilangan2"/>
+        <div class="box">
+            <select id="kalkulasi">
+                <option value="tambah">tambah</option>
+                <option value="kurang">kurang</option>
+                <option value="kali">kali</option>
+                <option value="bagi">bagi</option>
+            </select><button onclick="hitungAja()">Hitung</button>
+        </div>
+        <label for="#hasil" class="label">Hasilnya adalah:</label>
+        <input type="text" id="hasil"/>
     </form>
-</div>
+  </div>
+
 
 <footer>
   <h3 id="footer">@Copyright 2019   || powered by<a href="https://formspree.io">    formspree.io</a></h3>
 </footer>
+
+   
+
+
+
+
+
+
 
 <script src="JavaAja.js"></script>
 </body>
